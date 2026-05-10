@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     /* =============================================
-       JR. WASH — CSS FINAL V3 (ATUALIZAÇÃO COMPLETA)
+       JR. WASH — CSS FINAL V4 (REFINAMENTO)
     ============================================= */
     :root {
       --bg-deep: #050810;
@@ -331,47 +331,6 @@
     }
     .gallery-item:hover img { transform: scale(1.1); }
 
-    /* PACOTES */
-    .pricing-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-        margin-top: 40px;
-    }
-    .pricing-card {
-        background: var(--bg-card);
-        border: 1px solid var(--bg-border);
-        border-radius: var(--radius-lg);
-        padding: 40px;
-        text-align: center;
-        position: relative;
-        transition: var(--transition);
-    }
-    .pricing-card:hover { transform: translateY(-10px); border-color: var(--blue-500); }
-    .pricing-card--featured {
-        border: 2px solid var(--blue-500);
-        background: rgba(59, 130, 246, 0.05);
-    }
-    .featured-badge {
-        position: absolute;
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--blue-500);
-        color: #fff;
-        padding: 5px 15px;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-    .pricing-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
-    .pricing-price { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; color: var(--text-primary); }
-    .pricing-price span { font-size: 1rem; color: var(--text-muted); }
-    .pricing-features { text-align: left; margin-bottom: 30px; }
-    .pricing-features li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; color: var(--text-secondary); }
-    .pricing-features li::before { content: "✓"; color: var(--blue-400); font-weight: 900; }
-
     /* DEPOIMENTOS */
     .testimonials-grid {
         display: grid;
@@ -577,10 +536,6 @@
                 <i>🚗</i>
                 <span>Bancos automotivos</span>
             </div>
-            <div class="service-item fade-up">
-                <i>🧶</i>
-                <span>Tapetes</span>
-            </div>
         </div>
     </div>
   </section>
@@ -610,53 +565,6 @@
                 <div class="prob-card__icon">4️⃣</div>
                 <h3>Secagem</h3>
                 <p>Em poucas horas seu estofado está seco, cheiroso e pronto para uso.</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- ==================== ESCOLHA SEU PACOTE ==================== -->
-  <section class="section" id="pacotes">
-    <div class="container">
-        <div class="section-label fade-up">Investimento</div>
-        <h2 class="section-title fade-up">Escolha seu <span class="gradient-text">pacote</span></h2>
-        <div class="pricing-grid">
-            <!-- Essencial -->
-            <div class="pricing-card fade-up">
-                <h3>Essencial</h3>
-                <div class="pricing-price">R$350 <span>/serviço</span></div>
-                <ul class="pricing-features">
-                    <li>Sofá até 3 lugares OU colchão casal</li>
-                    <li>Higienização completa profunda</li>
-                    <li>Eliminação de ácaros e bactérias</li>
-                    <li>Remoção de odores</li>
-                </ul>
-                <a href="https://wa.me/5513999999999?text=Olá! Gostaria do Pacote Essencial." class="btn btn--ghost wa-link" target="_blank">Escolher Essencial</a>
-            </div>
-            <!-- Família -->
-            <div class="pricing-card pricing-card--featured fade-up">
-                <div class="featured-badge">Mais escolhido</div>
-                <h3>Família</h3>
-                <div class="pricing-price">R$480 <span>/serviço</span></div>
-                <ul class="pricing-features">
-                    <li>Sofá + Colchão Casal</li>
-                    <li>Ideal para quem tem criança ou pet</li>
-                    <li>Higienização completa profunda</li>
-                    <li>Proteção extra contra alérgenos</li>
-                </ul>
-                <a href="https://wa.me/5513999999999?text=Olá! Gostaria do Pacote Família." class="btn btn--primary wa-link" target="_blank">Escolher Família</a>
-            </div>
-            <!-- Premium -->
-            <div class="pricing-card fade-up">
-                <h3>Premium</h3>
-                <div class="pricing-price">R$600 <span>/serviço</span></div>
-                <ul class="pricing-features">
-                    <li>Sofá grande ou em L + Colchão + Travesseiros</li>
-                    <li>Agendamento prioritário</li>
-                    <li>Higienização completa profunda</li>
-                    <li>Tratamento especial de manchas</li>
-                </ul>
-                <a href="https://wa.me/5513999999999?text=Olá! Gostaria do Pacote Premium." class="btn btn--ghost wa-link" target="_blank">Escolher Premium</a>
             </div>
         </div>
     </div>
