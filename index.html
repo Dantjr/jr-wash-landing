@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     /* =============================================
-       JR. WASH — CSS FINAL V4 (REFINAMENTO)
+       JR. WASH — CSS FINAL V5 (CARD DESTAQUE)
     ============================================= */
     :root {
       --bg-deep: #050810;
@@ -306,30 +306,40 @@
     .service-item i { font-size: 2.5rem; display: block; margin-bottom: 12px; }
     .service-item span { font-weight: 700; font-size: 1.1rem; }
 
-    /* GALERIA */
-    .gallery-grid {
+    /* CARD DESTAQUE (SUBSTITUI GALERIA) */
+    .highlight-card {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: 1fr;
+        background: var(--bg-card);
+        border: 1px solid var(--bg-border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
         margin-top: 40px;
     }
     @media(min-width: 768px) {
-        .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .highlight-card { grid-template-columns: 1fr 1fr; align-items: center; }
     }
-    .gallery-item {
-        position: relative;
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        aspect-ratio: 4/3;
-        border: 1px solid var(--bg-border);
-    }
-    .gallery-item img {
+    .highlight-img {
         width: 100%;
         height: 100%;
+        min-height: 300px;
         object-fit: cover;
-        transition: transform 0.5s ease;
     }
-    .gallery-item:hover img { transform: scale(1.1); }
+    .highlight-content {
+        padding: 40px;
+    }
+    .highlight-badge {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.1);
+        color: var(--blue-400);
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    .highlight-content h3 { font-size: 2rem; font-weight: 900; margin-bottom: 16px; line-height: 1.2; }
+    .highlight-content p { color: var(--text-secondary); margin-bottom: 32px; font-size: 1.1rem; }
 
     /* DEPOIMENTOS */
     .testimonials-grid {
@@ -599,30 +609,21 @@
     </div>
   </section>
 
-  <!-- ==================== NOSSO TRABALHO (GALERIA) ==================== -->
+  <!-- ==================== NOSSO TRABALHO (CARD DESTAQUE) ==================== -->
   <section class="section" id="galeria">
     <div class="container">
-        <div class="section-label fade-up">Galeria</div>
+        <div class="section-label fade-up">Nosso Trabalho</div>
         <h2 class="section-title fade-up">Resultados reais em <span class="gradient-text">Santos e região</span></h2>
-        <p class="fade-up" style="color: var(--text-secondary); margin-top: -20px; margin-bottom: 30px;">Cada foto é um cliente atendido por nós.</p>
-        <div class="gallery-grid">
-            <div class="gallery-item fade-up">
-                <img src="trabalho-1.png" alt="Resultado de higienização JR Wash">
-            </div>
-            <div class="gallery-item fade-up">
-                <img src="trabalho-1.png" alt="Resultado de higienização JR Wash">
-            </div>
-            <div class="gallery-item fade-up">
-                <img src="trabalho-1.png" alt="Resultado de higienização JR Wash">
-            </div>
-            <div class="gallery-item fade-up">
-                <img src="trabalho-1.png" alt="Resultado de higienização JR Wash">
-            </div>
-            <div class="gallery-item fade-up">
-                <img src="trabalho-1.png" alt="Resultado de higienização JR Wash">
-            </div>
-            <div class="gallery-item fade-up">
-                <img src="trabalho-1.png" alt="Resultado de higienização JR Wash">
+        
+        <div class="highlight-card fade-up">
+            <img src="trabalho-1.png" alt="Sofá higienizado JR Wash" class="highlight-img">
+            <div class="highlight-content">
+                <span class="highlight-badge">Trabalho real</span>
+                <h3>Sofá higienizado e impermeabilizado</h3>
+                <p>Tecido microfibra, resultado em menos de 2h. Atendimento em domicílio em Santos SP.</p>
+                <a href="https://wa.me/5513999999999?text=Olá! Vi o sofá de microfibra e quero um orçamento igual para o meu." class="btn btn--primary wa-link" target="_blank">
+                    Quero igual para o meu
+                </a>
             </div>
         </div>
     </div>
